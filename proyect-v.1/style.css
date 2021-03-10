@@ -1,0 +1,17 @@
+.inicio{
+    color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+}
+.container{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border: 2px solid;
+    display: flexbox;
+}
+body,html{
+    height: 100%;
+    margin: 0;
+}

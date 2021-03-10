@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Build IT!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+    <!--Menu-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Build Container</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./inicio.html">Personaliza</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Predefinidos<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Web Server</a></li>
+                        <li><a href="#">FTP Server</a></li>
+                        <li><a href="#">SQL Server</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Fin Menu-->
+<body>
+    <div class="bg">
+        <form action="gen.php" method="POST">
+            <div class="container">
+                <p class="inicio">Welcome to DockerBuilder</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="titulos">
+                            <th scope="col-sm-3 col-md-3 col-lg-3">Imagenes</th>
+                            <th scope="col-sm-3 col-md-3 col-lg-3">Versiones Imagenes</th>
+                            <th scope="col-sm-3 col-md-3 col-lg-3">Servicios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ISO"><input type="checkbox" name="IMAGENES[]" value="debian"> &nbsp; Debian</td>
+                            <td class="IMAGENES">
+                                <input type="checkbox" name="VERSION[]" value="jessie-slim"> &nbsp; Jessie-Slim <br>
+                                <input type="checkbox" name="VERSION[]" value="jessie"> &nbsp; Jessie <br>
+                                <input type="checkbox" name="VERSION[]" value="stable"> &nbsp; Stable
+                            </td>
+                            <td class="APP" rowspan="2">
+                                <input type="checkbox" name="APLICACIONES[]" value="php libapache2-mod-php php-mysql"> &nbsp; PHP <br>
+                                <input type="checkbox" name="APLICACIONES[]" value="mysql-server"> &nbsp; MySqL <br>
+                                <input type="checkbox" name="APLICACIONES[]" value="apache2"> &nbsp; Apache<br>
+                                <input type="checkbox" name="APLICACIONES[]" value="nginx"> &nbsp; Nginx <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ISO">
+                                <input type="checkbox" name="IMAGENES[]" value="ubuntu"> &nbsp; Ubuntu
+                                <td class="Versiones">
+                                    <input type="checkbox" name="VERSION[]" value="16.04"> &nbsp; 16.04 <br>
+                                    <input type="checkbox" name="VERSION[]" value="18.04"> &nbsp; 18.04 <br>
+                                    <input type="checkbox" name="VERSION[]" value="19.04"> &nbsp; 19.04
+                                </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="checkbox" name="ACTUALIZAR[]" value="update"> &nbsp; Actualizar
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">
+                                <p>Nombre del Contador</p>
+                                <input type="text" name="NOMBRE[]"> <br><br>
+                                <input type="submit" name="crear" value="Crear Contenedor">
+                            </td>
+                            <td rowspan="3">
+                                <p>Crear Archivo</p>
+                                <input type="submit" name="Enviar" value="Crear Archivo">
+                            </td>
+                            <td rowspan="3">
+                                <p>Borrar</p>
+                                <input type="submit" name="borrar" value="Monitor">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            
+        </div>
+    </form>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
