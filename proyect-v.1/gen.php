@@ -49,15 +49,17 @@ if( isset($_POST['Enviar'])){
 if (isset($_POST['crear'])){
     $nombre = $_POST['NOMBRE'];
     foreach($nombre as $key => $i){
-        print "Tu contenedor se ha creado con el nombre de: " .$i. "\n";
+        echo "Tu contenedor se ha creado con el nombre de: " .$i. "\n";
         exec("docker build -f .\Dockerfile.txt -t " .$i. " .");
     }
+}else{
+    echo "Error: No se ha creado el contenedor";
 }
 
 ##quitar dockerfile
 if( isset($_POST['borrar'])){
     exec("del Dockerfile.txt");
-    print "Registro limpio";
+    echo "Registro limpio";
 }else{
     echo "Error al procesar el programa";
 }
